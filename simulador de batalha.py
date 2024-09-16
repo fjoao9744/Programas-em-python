@@ -32,7 +32,7 @@ while True:
         system("cls")
         break
 
-    monstros.append({"nome": input("nome: "), "hp": int(input("hp: ")), "atk": int(input("atk: ")), "def": int(input("def: ")), "exp": int(input("exp: "))})
+    monstros.append({"nome": input("nome: "), "hp": int(input("hp: ")), "atk": int(input("atk: ")), "def": int(input("def: ")), "exp": int(input("exp: ")), "gil": int(input("gil: "))})
 
 
     system("cls")
@@ -100,5 +100,24 @@ while True:
         monstros[monstro]["hp"] -= dano
         print(f'O {monstros[monstro]["nome"]} recebeu {dano}')
     system("cls")
+
+
+    todos_mortos = True
+    for _ in monstros:
+        if _["hp"] >= 0:
+            todos_mortos = False
+
+    if todos_mortos == True:
+        break
+
+exp = 0
+for _ in monstros:
+    exp += _["exp"]
+gil = 0
+for _ in monstros:
+    gil += _["gil"]
+
+
+print(f"Os monstros droparam {exp} de exp e {gil} de gil")
 
 
