@@ -4,17 +4,27 @@ from os import system
 
 #fichas
 monstros = [
-    {"nome": "Goblin1", "hp": 4, "atk":2, "def": 4}, 
-    {"nome": "Goblin2", "hp": 4, "atk":2, "def": 4}
+    {"nome": "Goblin guarda", "hp": 16, "atk": 8, "def": 6, "exp": 16, "gil": 18},
+
+    {"nome": "Goblin1", "hp": 8, "atk": 4, "def": 4, "exp": 6, "gil": 6},
+    {"nome": "Goblin2", "hp": 8, "atk": 4, "def": 4, "exp": 6, "gil": 6},
+    {"nome": "Goblin3", "hp": 8, "atk": 4, "def": 4, "exp": 6, "gil": 6},
+    {"nome": "Goblin4", "hp": 8, "atk": 4, "def": 4, "exp": 6, "gil": 6},
+    {"nome": "Goblin5", "hp": 8, "atk": 4, "def": 4, "exp": 6, "gil": 6},
+
+    {"nome": "Imp1", "hp": 10, "atk": 6, "def": 5, "exp": 12, "gil": 14},
+    {"nome": "Imp2", "hp": 10, "atk": 6, "def": 5, "exp": 12, "gil": 14},
+    {"nome": "Imp3", "hp": 10, "atk": 6, "def": 5, "exp": 12, "gil": 14}
+
     ]
     
 players = [
-    {"nome": "Hendrick", "hp": 20, "atk":3, "def": 1},
-    {"nome": "Henki", "hp": 20, "atk":3, "def": 1},
-    {"nome": "Cristian", "hp": 20, "atk":3, "def": 1},
-    {"nome": "Dudu", "hp": 20, "atk":3, "def": 1},
-    {"nome": "Otavio", "hp": 20, "atk":3, "def": 1},
-    {"nome": "Yoshi", "hp": 20, "atk":3, "def": 1}
+    {"nome": "Hendrick", "hp": 35, "atk":17, "def": 1},
+    {"nome": "Henki", "hp": 25, "atk":10, "def": 1},
+    {"nome": "Cristian", "hp": 26, "atk":8, "def": 5},
+    {"nome": "Dudu", "hp": 29, "atk":13, "def": 1},
+    {"nome": "Otavio", "hp": 17, "atk":2, "def": 1},
+    {"nome": "Yoshi", "hp": 14, "atk":6, "def": 1}
     ]
 
 
