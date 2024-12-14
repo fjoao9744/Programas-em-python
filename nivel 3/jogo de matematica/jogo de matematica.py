@@ -4,6 +4,7 @@ from connect_db import *
 
 app = Tk()
 app.geometry("300x300")
+app.resizable(False, False)
 
 operações = ["x", "÷", "+", "-"]
 pontos = 0
@@ -28,6 +29,8 @@ def errado(event=None):
         pontos_top.delete(0, END)
         for i, _ in enumerate(exibir_dados()):
             pontos_top.insert(END, f"{i + 1}° - {_[0]} - {_[1]}")
+
+        pontos_top.config(height=5)
 
 def enviar(event=None):
     operação_texto = operação["text"].replace("x", "*")
@@ -65,15 +68,15 @@ vidas_label_num = Label(game_frame, text=3)
 vidas_label_num.place(x=280, y=0)
 
 operação = Label(game_frame, text=f"{randint(0, 10)} {choices(operações)[0]} {randint(0, 10)}", font=("Arial", 20))
-operação.pack()
+operação.pack(expand=True)
 
-resposta_entry = Entry(game_frame, font=("Arial", 20), justify=CENTER)
-resposta_entry.pack()
+resposta_entry = Entry(game_frame, font=("Arial", 20), justify=CENTER, width=10)
+resposta_entry.pack(expand=True)
 
 resposta_entry.bind("<Return>", enviar)
 
-botão_enviar = Button(game_frame, text="Send", command=enviar)
-botão_enviar.pack()
+botão_enviar = Button(game_frame, text="Send", command=enviar, font=("Arial", 13))
+botão_enviar.pack(expand=True)
 
 game_over.place_forget()
 
@@ -88,8 +91,6 @@ def save(event=None):
 
     game_over.place_forget()
     game_frame.place(relwidth=1, relheight=1)
-
-
 
 game_over_label = Label(game_over, text="GAME OVER", font=("Arial", 25)).pack()
 
@@ -106,7 +107,7 @@ nome_botão_save = Button(game_over, text="save", command=save)
 nome_botão_save.pack()
 
 pontos_top = Listbox(game_over, relief=FLAT)
-pontos_top.pack()
+pontos_top.pack(pady=20)
 
 
 
